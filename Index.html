@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="Css/Mediaquery.css" />
+    <!-- font => Open Sans 400 600 700 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font => Nunito 400 700 800 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <title>Beatmaker</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="animate__animated animate__backInDown">BeatMaker</h1>
+    </header>
+    <section class="container-fluid soundsection">
+      <!-- Kick -->
+      <div class="row kick-track">
+        <div class="col-lg-2"><h2>Kick</h2></div>
+        <div class="col-lg-1 mutediv">
+          <button class="mute kick-volume" data-track="0"></button>
+        </div>
+        <div class="col-lg-3 control">
+          <select name="kick-select" id="kick-select">
+            <option value="./Sounds/Kick-and_repetitive_tech.wav">
+              Tech Kick
+            </option>
+            <option value="./Sounds/Kick-dry-boomy-kick_C.wav">
+              Boomy Kick
+            </option>
+            <option value="./Sounds/Kick-House_Techno_Straight.wav">
+              House Kick
+            </option>
+            <option value="./Sounds/Kick-house-kick-single.wav">
+              Single Kick
+            </option>
+          </select>
+        </div>
+        <div class="col-lg-6 kick">
+          <div class="pad kickpad b0"></div>
+          <div class="pad kickpad b1"></div>
+          <div class="pad kickpad b2"></div>
+          <div class="pad kickpad b3"></div>
+          <div class="pad kickpad b4"></div>
+          <div class="pad kickpad b5"></div>
+          <div class="pad kickpad b6"></div>
+          <div class="pad kickpad b7"></div>
+        </div>
+      </div>
+
+      <!-- Trap -->
+      <div class="row trap-track">
+        <div class="col-lg-2"><h2>Trap</h2></div>
+        <div class="col-lg-1 mutediv">
+          <button class="mute trap-volume" data-track="1"></button>
+        </div>
+        <div class="col-lg-3 control">
+          <select name="trap-select" id="trap-select">
+            <option value="./Sounds/Trap-clap-falling-hit.wav">
+              Clap Trap
+            </option>
+            <option value="./Sounds/Trap-snare-fall-hit.wav">Fall Trap</option>
+          </select>
+        </div>
+        <div class="col-lg-6 trap">
+          <div class="pad trappad b0"></div>
+          <div class="pad trappad b1"></div>
+          <div class="pad trappad b2"></div>
+          <div class="pad trappad b3"></div>
+          <div class="pad trappad b4"></div>
+          <div class="pad trappad b5"></div>
+          <div class="pad trappad b6"></div>
+          <div class="pad trappad b7"></div>
+        </div>
+      </div>
+
+      <!-- Snare -->
+      <div class="row snare-track">
+        <div class="col-lg-2"><h2>Snare</h2></div>
+        <div class="col-lg-1 mutediv">
+          <button class="mute snare-volume" data-track="2"></button>
+        </div>
+        <div class="col-lg-3 control">
+          <select name="snare-select" id="snare-select">
+            <option value="./Sounds/Snare-funky-bass.wav">Funky Snare</option>
+            <option value="./Sounds/Snare-mono-shot-clean.wav">
+              Mono Snare
+            </option>
+          </select>
+        </div>
+        <div class="col-lg-6 snare">
+          <div class="pad snarepad b0"></div>
+          <div class="pad snarepad b1"></div>
+          <div class="pad snarepad b2"></div>
+          <div class="pad snarepad b3"></div>
+          <div class="pad snarepad b4"></div>
+          <div class="pad snarepad b5"></div>
+          <div class="pad snarepad b6"></div>
+          <div class="pad snarepad b7"></div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="row playbtn">
+        <button class="playbtnchild">Play</button>
+      </div>
+      <div class="row tempo">
+        <input
+          type="range"
+          name="tempo"
+          id="tempo"
+          class="tempo-slider"
+          min="20"
+          value="150"
+          max="300"
+        />
+      </div>
+      <p class="tempop">Tempo:&nbsp; <span class="tempo-number">150</span></p>
+    </section>
+    <audio
+      src="./Sounds/Kick-and_repetitive_tech.wav"
+      class="kicksound"
+    ></audio>
+    <audio src="Sounds/Trap-clap-falling-hit.wav" class="trapsound"></audio>
+    <audio src="Sounds/Snare-funky-bass.wav" class="snaresound"></audio>
+    <p class="copyright">&#169; Developed And Designed By Koosha</p>
+    <p class="socialmedia">
+      <a href="https://www.linkedin.com/in/kooshasamadi/">LinkedIn</a>
+      <a href="https://github.com/KooshaSamadi">Github</a>
+    </p>
+    ّ
+  </body>
+  <script src="Js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"
+  ></script>
+</html>

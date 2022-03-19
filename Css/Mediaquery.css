@@ -1,0 +1,19 @@
+@media (max-width: 991.98px) {
+  .mutediv {
+    margin-top: 0.5rem !important;
+  }
+  .control {
+    margin-top: 0.5rem !important;
+  }
+  .kick-track > div,
+  .snare-track > div,
+  .trap-track > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem !important;
+  }
+  .tempo-slider{
+    width: 50%;
+  }
+}
